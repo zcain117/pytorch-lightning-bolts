@@ -119,3 +119,8 @@ STL-10 Eval (m2)
 ^^^^^^^^^^^^^^^^^^^
 .. autoclass:: pl_bolts.models.self_supervised.moco.transforms.Moco2EvalImagenetTransforms
     :noindex:
+
+-----------------
+
+SimCLR transforms
+-----------------
