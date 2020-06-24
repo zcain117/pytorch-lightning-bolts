@@ -422,6 +422,7 @@ if __name__ == '__main__':
         datamodule.val_transforms = CPCEvalTransformsCIFAR10()
 
     if args.dataset == 'stl10':
+        print('running STL-10')
         datamodule = STL10DataModule.from_argparse_args(args)
         datamodule.train_dataloader = datamodule.train_dataloader_mixed
         datamodule.val_dataloader = datamodule.val_dataloader_mixed
