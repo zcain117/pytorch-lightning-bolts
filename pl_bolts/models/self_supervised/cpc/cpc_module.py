@@ -389,7 +389,7 @@ class CPCV2(pl.LightningModule):
 
         resnets = ['resnet18', 'resnet34', 'resnet50', 'resnet101', 'resnet152', 'resnext50_32x4d', 'resnext101_32x8d',
                    'wide_resnet50_2', 'wide_resnet101_2']
-        parser.add_argument('--encoder', default='cpc_resnet', type=str)
+        parser.add_argument('--encoder', default='cpc_encoder', type=str)
 
         # dataset options
         parser.add_argument('--patch_size', default=dataset['patch_size'], type=int)
@@ -424,6 +424,7 @@ if __name__ == '__main__':
     if args.dataset == 'stl10':
         datamodule = STL10DataModule.from_argparse_args(args)
         datamodule.train_dataloader = datamodule.train_dataloader_mixed
+        datamodule.val_dataloader = datamodule.val_dataloader_mixed
         datamodule.train_transforms = CPCTrainTransformsSTL10()
         datamodule.val_transforms = CPCEvalTransformsSTL10()
 
