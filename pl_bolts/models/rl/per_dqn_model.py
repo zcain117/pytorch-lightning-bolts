@@ -101,7 +101,7 @@ from torch.utils.data import DataLoader
 
 from pl_bolts.models.rl.common.experience import ExperienceSource, PrioRLDataset
 from pl_bolts.models.rl.common.memory import PERBuffer
-from pl_bolts.models.rl.dqn.dqn_model import DQN
+from pl_bolts.models.rl.dqn_model import DQN
 
 
 class PERDQN(DQN):
